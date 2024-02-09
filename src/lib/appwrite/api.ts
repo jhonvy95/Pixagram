@@ -288,8 +288,9 @@ export async function updatePost(post: IUpdatePost) {
       // console.log({ fileUrl });
 
       if (!fileUrl) {
-        deleteFile(uploadedFile.$id);
-        throw Error;
+
+       await deleteFile(uploadedFile.$id);
+        throw new Error;
       }
 
       image = { ...image, imageUrl: fileUrl, imageId: uploadedFile.$id };

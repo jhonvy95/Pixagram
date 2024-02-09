@@ -5,6 +5,15 @@ import useDebounce from "@/hooks/useDebounce";
 import { useGetPosts, useSearchPosts } from "@/lib/react-query/queriesAndMutations";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 
 const Explore = () => {
   const { ref, inView } = useInView();
@@ -45,12 +54,6 @@ const Explore = () => {
       </div>
       <div className="flex-between w-full max-w-5xl mt-16 mb-7">
         <h3 className="body-bold md:h3-bold">Popular Today</h3>
-        <div className="flex-center gap-3 bg-dark-3 rounded-xl px-4 py-2 cursor-pointer">
-          <p className="small-medium md:base-medium text-light-2">All</p>
-          <p>
-            <img src="/assets/icons/filter.svg" alt="filter" width={20} height={20} />
-          </p>
-        </div>
       </div>
 
       <div className="flex flex-wrap gap-9 w-full max-w-5xl">

@@ -121,11 +121,6 @@
     @apply w-full grid grid-cols-1 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-7 max-w-5xl;
   }
 
-  /* Top Creators grid */
-  .creator-grid {
-    @apply w-full grid grid-cols-2 gap-7 max-w-5xl;
-  }
-
   /* Explore */
   .explore-container {
     @apply flex flex-col flex-1 items-center overflow-scroll py-10 px-5 md:p-14 custom-scrollbar;
@@ -225,11 +220,6 @@
   /* Left sidebar */
   .leftsidebar {
     @apply hidden md:flex px-6 py-10 flex-col justify-between min-w-[270px] bg-dark-2;
-  }
-
-  /* Right sidebar */
-  .rightsidebar {
-    @apply hidden md:flex px-6 py-10 flex-col justify-between min-w-[270px]  bg-dark-2;
   }
 
   .leftsidebar-link {

@@ -5,15 +5,7 @@ import useDebounce from "@/hooks/useDebounce";
 import { useGetPosts, useSearchPosts } from "@/lib/react-query/queriesAndMutations";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
+
 
 const Explore = () => {
   const { ref, inView } = useInView();
@@ -58,7 +50,7 @@ const Explore = () => {
 
       <div className="flex flex-wrap gap-9 w-full max-w-5xl">
         {shouldShowSearchResults ? (
-          <SearchResults isSearchFeching={isSearchPosts} searchedPosts={searchedPosts} />
+          <SearchResults isSearchFetching={isSearchPosts} searchedPosts={searchedPosts} />
         ) : shouldShowPosts ? (
           <p className="text-light-4 mt-10 text-center w-full">End of posts</p>
         ) : (

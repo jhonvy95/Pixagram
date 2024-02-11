@@ -355,10 +355,11 @@ export async function getInfinitePosts({ pageParam }: { pageParam: number }) {
       appwriteConfig.postCollectionId,
       queries
     );
-    if (!posts) throw Error;
+    if (!posts) throw new Error('No posts found');
     return posts;
   } catch (error) {
     console.log(error);
+    throw new Error('Failed to get posts');
   }
 }
 

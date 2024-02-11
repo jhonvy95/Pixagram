@@ -66,9 +66,9 @@ const PostDetails = () => {
             </div>
             <hr className="border w-full border-dark-4/80" />
 
-            <div className="flex flex-col flex-1 w-full small-medium lg:base-regular">
-              <p>{post?.caption}</p>
-              <ul className="flex gap-1 mt-2">
+            <div className="flex flex-col w-full small-medium lg:base-regular">
+              <p className='w-auto break-words'>{post?.caption}</p>
+              <ul className="flex flex-wrap gap-1 mt-2">
                 {post?.tags.map((tag: string) => (
                   <li key={tag} className="text-light-3">
                     #{tag}

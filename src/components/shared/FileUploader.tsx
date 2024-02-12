@@ -23,6 +23,7 @@ const FileUploader = ({ fileldChange, mediaUrl }: FileUploaderProps) => {
     accept: {
       "image/*": [".png", ".jpg", ".jpeg", ".svg"],
     },
+    maxFiles: 1,
   });
 
   return (
@@ -30,7 +31,7 @@ const FileUploader = ({ fileldChange, mediaUrl }: FileUploaderProps) => {
       {...getRootProps()}
       className="flex flex-center flex-col bg-dark-3 rounded-xl cursor-pointer"
     >
-      <input {...getInputProps()} className="cursor-pointer" />
+      <input {...getInputProps({ multiple: false })} className="cursor-pointer" />
       {fileUrl ? (
         <>
           <div className="flex flex-1 justify-center w-full p-5 lg:p-10">

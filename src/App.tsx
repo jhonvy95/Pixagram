@@ -16,10 +16,12 @@ import {
 import AuthLayout from "./_auth/AuthLayout";
 import RootLayout from "./_root/RootLayout";
 import { Toaster } from "@/components/ui/toaster";
+import ScrollToTop from "@/components/shared/ScrollToTop.tsx";
 
 const App = () => {
   return (
     <main className="flex h-screen">
+      <ScrollToTop />
       <Routes>
         {/* public routes */}
         <Route element={<AuthLayout />}>
